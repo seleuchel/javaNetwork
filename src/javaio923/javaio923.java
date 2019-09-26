@@ -31,7 +31,7 @@ public class javaio923 {
 		
 //2.1  둘 다 파일로 출력하는 print()와 write()의 차이		
 //		PrintStream ps = new PrintStream(new FileOutputStream( "write.txt"));
-//		ps.write(127); //127로 바이트를 쓰나 보이지는 않음. 한 바이트를 출력한다.
+//		ps.write(127); //0000 0127로 바이트를 쓰나 보이지는 않음. 한 바이트를 출력한다.
 //
 //		PrintStream ps1 = new PrintStream(new FileOutputStream("print.txt"));
 //		ps1.print(127);//1,2,7 : 세 바이트를 출력한다.
@@ -54,6 +54,7 @@ public class javaio923 {
 //java는 bigendian!! 상위 바이트부터 떼어 처리
 
 //1. 예제 : DataOutputStream 으로 출력하기. textfile 내의 것은 127 64
+//어떤 데이터로 출력을 할 거냐에 대한 => DataOutputStream
 //이상한 문자(127)와 A(64)가 출력되었다. 
 //	       Scanner input = new Scanner(new File("textfile"));
 //	       DataOutputStream out = new DataOutputStream(new FileOutputStream("binaryFile"));
@@ -97,12 +98,12 @@ public class javaio923 {
 //		}
 //		System.out.println(total + " bytes");
 	
-//3. EOF exception  
+//3. EOF exception  @@일종의 IO Exception?
 //this code no throws exception in main
 //		int total = 0; //3번 read int int eofexception #-1대신에 이게 출력.
 //		try{
 //			DataInputStream dis = new DataInputStream(
-//				new FileInputStream("1000.dat"));
+//				new FileInputStream("1000.dat")); # DataInputStream
 //			while (true) {
 //				int theRead = dis.readInt();
 //				total++;
@@ -124,6 +125,7 @@ public class javaio923 {
 			
 			dos.close();
 		try {
+			//DataInputStream
 			DataInputStream dis = new DataInputStream(new FileInputStream("1000.txt"));
 		while(true) {
 			byte read = dis.readByte();
@@ -135,6 +137,7 @@ public class javaio923 {
 	}
 	
 		try {
+			// 3번째 내용. 이진수로 출력하라며, ppt 내용하고 많이 다른데, 괜찮아?? 문제에서 요구하는 출력을 잘 모르겠다.
 			DataInputStream dis1 = new DataInputStream(new FileInputStream("1000.txt"));
 		while(true) {
 			double read2 = dis1.readDouble();
@@ -146,7 +149,6 @@ public class javaio923 {
 	}
 		
 // 이진수로 출력하라며, ppt 내용하고 많이 다른데, 괜찮아?? 문제에서 요구하는 출력을 잘 모르겠다.
-	       
 	
 //    static int pow(int a, int b) {
 //return (int) (Math.pow(a, b));
