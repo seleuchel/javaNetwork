@@ -103,9 +103,10 @@ public class JavaIo926 {
 		// 52바이트(문자만으로) + a[알파](라인변환 26바이트) = 78바이트 
 		PrintWriter pw = new PrintWriter(
                 new BufferedWriter(
-                new FileWriter ("alphabet.txt")));
+                new FileWriter ("alphabet2.txt")));
 		for (int i = 0 ; i < 26; i++)
-			pw.println ((char)(i + 'A'));  // 문자로 변환
+			//pw.println ((char)(i + 'A'));  // 문자로 변환
+			pw.print ((char)(i + 'A'));  // 문자로 변환
 		pw.close();
 
 
