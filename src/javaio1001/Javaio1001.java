@@ -56,6 +56,7 @@ public class Javaio1001 {
 //		}
 //		
 //		isr.close();
+		
 //5. 바이트 배열에 저장해서 필요할 때 문자열로 변환하여 사용할 수도 있다. (원시 상태로 읽어서 string으로 바꾸어 읽는다)
 //모든 2바이트 문자를 처리하는 방법!!
 //		byte [] buf = new byte[1024];
@@ -103,6 +104,7 @@ public class Javaio1001 {
 		osw.write(s); 
 		osw.flush();
 		byte[] ba = bos.toByteArray();
+		
 		// 바이트 배열의 전체 내용을 한 바이트씩 출력해 본다
 		for(int m=0;m<ba.length;m++){
 			int ich = ba[m] & 0xff;
@@ -111,13 +113,6 @@ public class Javaio1001 {
 		// 바이트 배열을 문자열로 변환하여 출력해 본다
 		String reconstructed = new String(ba, 0, ba.length);
 		System.out.println('\n' + reconstructed);
-		
-		
-		
-		
-		
-		
-		
 		
 	}
 }
