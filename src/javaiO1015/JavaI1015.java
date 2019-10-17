@@ -1,4 +1,4 @@
-package JavaIO1015;
+package javaiO1015;
 
 /*
  * 지난시간에 뭐 했는지 정리 좀 해 보자.
