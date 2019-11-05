@@ -9,7 +9,7 @@ public class javaio923 {
 		
 //1 . 문자로 바꾸어 파일로 출력.	
 //		try {
-//			FileOutputStream fos = new FileOutputStream("textout.txt");
+//			FileOutputStream fos = new FileOutputStream("alphabet.txt");
 //			PrintStream ps = new PrintStream(fos);
 //			boolean bool = true;
 //			ps.println(bool);// boolean
@@ -115,39 +115,39 @@ public class javaio923 {
 //			System.err.println("Some IO Exception occurred");
 //		}
 
-		
-		DataOutputStream dos = new DataOutputStream(new FileOutputStream("1000.txt"));
-			dos.writeDouble(3.141592);
-			dos.writeDouble(0.12122112);
-			dos.writeDouble(1.1111111);
-			dos.writeDouble(9.98989898);
-			dos.writeDouble(9.33333333);
-			
-			dos.close();
-		try {
-			//DataInputStream
-			DataInputStream dis = new DataInputStream(new FileInputStream("1000.txt"));
-		while(true) {
-			byte read = dis.readByte();
-			System.out.print(read);
-		}
-		
-	}catch (EOFException e) {
-		System.out.println("ok");
-	}
-	
-		try {
-			// 3번째 내용. 이진수로 출력하라며, ppt 내용하고 많이 다른데, 괜찮아?? 문제에서 요구하는 출력을 잘 모르겠다.
-			DataInputStream dis1 = new DataInputStream(new FileInputStream("1000.txt"));
-		while(true) {
-			double read2 = dis1.readDouble();
-			System.out.print(read2);
-		}
-		
-	}catch (EOFException e) {
-		System.out.println("ok");
-	}
-		
+//		
+//		DataOutputStream dos = new DataOutputStream(new FileOutputStream("1000.txt"));
+//			dos.writeDouble(3.141592);
+//			dos.writeDouble(0.12122112);
+//			dos.writeDouble(1.1111111);
+//			dos.writeDouble(9.98989898);
+//			dos.writeDouble(9.33333333);
+//			
+//			dos.close();
+//		try {
+//			//DataInputStream
+//			DataInputStream dis = new DataInputStream(new FileInputStream("1000.txt"));
+//		while(true) {
+//			byte read = dis.readByte();
+//			System.out.print(read);
+//		}
+//		
+//	}catch (EOFException e) {
+//		System.out.println("ok");
+//	}
+//	
+//		try {
+//			// 3번째 내용. 이진수로 출력하라며, ppt 내용하고 많이 다른데, 괜찮아?? 문제에서 요구하는 출력을 잘 모르겠다.
+//			DataInputStream dis1 = new DataInputStream(new FileInputStream("1000.txt"));
+//		while(true) {
+//			double read2 = dis1.readDouble();
+//			System.out.print(read2);
+//		}
+//		
+//	}catch (EOFException e) {
+//		System.out.println("ok");
+//	}
+//		
 // 이진수로 출력하라며, ppt 내용하고 많이 다른데, 괜찮아?? 문제에서 요구하는 출력을 잘 모르겠다.
 	
 //    static int pow(int a, int b) {

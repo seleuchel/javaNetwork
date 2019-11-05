@@ -1,7 +1,7 @@
 package javaio919;
 
-import java.io.*;
-import java.util.Date;
+import java.io.FileInputStream;
+import java.io.IOException;
 
 public class javaio919 { 
 	public static void main(String[] args) throws IOException{
@@ -20,7 +20,7 @@ public class javaio919 {
 //		
 		
 //예제 2 : javalogo.gif 바이트 수 확인
-//		FileInputStream fi = new FileInputStream("javalogo.gif");
+//		FileInputStream fi = new FileInputStream("sampledatabox/javalogo.gif");
 //		int total = 0;
 //		int j = fi.read();
 //		
@@ -28,7 +28,7 @@ public class javaio919 {
 //			total++;
 //			j = fi.read();
 //			//값 확인
-//			System.out.print((char)j);
+//			//System.out.print((char)j);
 //
 //		}
 //		
@@ -96,19 +96,19 @@ public class javaio919 {
 //		fi.close();
 //		fos.close();
 		
-//예제 9. 기타		
-//		FileInputStream fi = new FileInputStream("javalogo.gif");
+////예제 9. 기타		 - edit right
+//		FileInputStream fi = new FileInputStream("sampledatabox/javalogo.gif");
 //	
-//		int bytesAvailable = in.available();
-//		byte[] input = new byte[bytesAvailable];
-//		int bytesRead = in.read(input, 0, bytesAvailable);
+//		int bytesAvailable = fi.available();
+//		System.out.println(bytesAvailable);
+//		byte[] buffer = new byte[bytesAvailable];
+//		int bytesRead = fi.read(buffer, 0, bytesAvailable);
 //		// perform next line immediately
 //
-//		int count = fi.read(buffer,0,buffer.length);
-//		fi.close();
-//		System.out.println(" bytes read: " + count);
+//		//int count = fi.read(buffer,0,buffer.length);
+//	//	System.out.println(" bytes read: " + count);
 //		
-//		for (int i = 0; i < count ; i++) {
+//		for (int i = 0; i < bytesAvailable ; i++) {
 //			int alpha = buffer[i] & 0xff;
 //			System.out.print(alpha + " ");
 //			if(i % 8 == 7) System.out.print('\n');
@@ -117,8 +117,8 @@ public class javaio919 {
 //		}
 //		
 //		System.out.println(fi.available());
-		
-//지금까지 바이트 스트림 , while input, while ouputstream	
+//		fi.close();
+////지금까지 바이트 스트림 , while input, while ouputstream	
 
 		
 		
@@ -145,27 +145,27 @@ public class javaio919 {
 //		long end = new Date().getTime();
 //		System.out.println("Buffered Elapsed Time = " + (end - start));
 		
-		
-		int from = 0;
-		int to = 100000;
-		long start = new Date().getTime();
-		FileOutputStream fos = new FileOutputStream("numbers.dat");
-		for(int i = from; i < to; i++) {
-			fos.write(i);
-		}
-		fos.close();
-		int bytes = 0;
-		FileInputStream fis = new FileInputStream("numbers.dat");
-		int input = fis.read();
-		while(input != -1) {
-			bytes++;
-			input = fis.read();
-		}
-		System.out.println("Tot = " + bytes);
-		fis.close();
-		long end = new Date().getTime();
-		System.out.println("Elapsed Time = " + (end - start));
-		//버퍼 안 쓴게 더 빠른듯
+//		
+//		int from = 0;
+//		int to = 100000;
+//		long start = new Date().getTime();
+//		FileOutputStream fos = new FileOutputStream("numbers.dat");
+//		for(int i = from; i < to; i++) {
+//			fos.write(i);
+//		}
+//		fos.close();
+//		int bytes = 0;
+//		FileInputStream fis = new FileInputStream("numbers.dat");
+//		int input = fis.read();
+//		while(input != -1) {
+//			bytes++;
+//			input = fis.read();
+//		}
+//		System.out.println("Tot = " + bytes);
+//		fis.close();
+//		long end = new Date().getTime();
+//		System.out.println("Elapsed Time = " + (end - start));
+//		//버퍼 안 쓴게 더 빠른듯
 
 		
 	}

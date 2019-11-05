@@ -7,21 +7,23 @@ import java.io.*;
  */
 public class JavaIO917 {
 	public static void main(String args[]) throws Exception {
-		// 예제1 출력 : 파일 생성하여 FileOUtputStream으로 출력하기
-		//한 번에 한 바이트
+//		// 예제1 출력 : 파일 생성하여 FileOUtputStream으로 출력하기
+//		//한 번에 한 바이트
 //		FileOutputStream fos = new FileOutputStream("file01.dat");
-//		for (int i = 65; i < 65 + 26; i++) 
-//			fos.write(i);
+//		for (int i = 65; i < 65 + 26; i++) {
+//			fos.write((char)i);
+//			System.out.print((char)i);
+//		}
 //		// 위 두개를 주석처리하면 파일 내용이 모두 지워져 버림! 
 //		fos.close();
 //		System.out.println(System.getProperty("user.dir"));
 	
 		// 예제 2
-//		FileOutputStream fos = new FileOutputStream("file02.dat");
+//		FileOutputStream fos = new FileOutputStream(new File("file02.dat"));
 //		for(int i=33; i < 126 ; i++) {
 //			fos.write(i);
 //		}
-//		fos.close();
+////		fos.close();
 		
 		//예제 3
 //		FileOutputStream fos = new FileOutputStream("file321.dat");
@@ -54,22 +56,22 @@ public class JavaIO917 {
 //		fos.close();
 		
 		//예제 7 : 통째로 출력하는 것
-//		String s = "자랑스런 전남대학교";
-//		byte[] data = s.getBytes();
-//		
-//		FileOutputStream fos1 = new FileOutputStream("jnu.dat");
-//		fos1.write(data);
-//		fos1.close();
+		String s = "자랑스런 전남대학교";
+		byte[] data = s.getBytes();
+		
+		FileOutputStream fos1 = new FileOutputStream("jnu.dat");
+		fos1.write(data);
+		fos1.close();
 		
 // < 입력 스트림  예제 >
-		FileInputStream fis = new FileInputStream ("20200915JavaByteStream.txt");
-		int total = 0;
-		int j = fis.read();
-		while (j != -1) {
-			total++;
-			j = fis.read();
-		}
-		System.out.println(total + " bytes");
+//		FileInputStream fis = new FileInputStream ("20200915JavaByteStream.txt");
+//		int total = 0;
+//		int j = fis.read();
+//		while (j != -1) {
+//			total++;
+//			j = fis.read();
+//		}
+//		System.out.println(total + " bytes");
 		
 	}
 }

@@ -30,6 +30,7 @@ public class JavaIO910 {
 		//Q 질문 absoultepath랑 canonicalpath는 뭘하는 메소드인가
 		//우리는 절대경로라는 의미로 canonicalpath()를 사용하면 된다.
 		
+		
 		//파일 생성 예제  - root dir에 생성된다.
 		File newFile = new File("veryUseful.txt");
 		boolean success = newFile.createNewFile();
