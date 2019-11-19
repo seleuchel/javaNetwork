@@ -92,7 +92,7 @@ public class JavaIO1114 {
 		    
 		    Socket socket = null;
 		    try {
-		      socket = new Socket(HOSTNAME, 37);
+		      socket = new Socket("localhost", 37);
 		      socket.setSoTimeout(15000);
 
 		      InputStream raw = socket.getInputStream();

@@ -9,7 +9,7 @@ public class DaytimeClient {
 		String hostname = args.length > 0 ? args[0] : "localhost";
 		Socket socket = null;
 		try {
-			socket = new Socket(hostname, 13);
+			socket = new Socket(hostname, 37);
 			socket.setSoTimeout(15000);
 			InputStream in = socket.getInputStream();
 			InputStreamReader reader = new InputStreamReader(in, "ASCII");
@@ -31,3 +31,5 @@ public class DaytimeClient {
 		}
 	}
 }
+
+//
